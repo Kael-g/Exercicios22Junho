@@ -10,7 +10,7 @@ public class ContaPoupanca extends ContaBancaria{
     }
 
     public void calcularNovoSaldo(double taxaRendimento){
-        setSaldo(getSaldo()+getSaldo()*(taxaRendimento/100)*diaRendimento);
+        setSaldo(getSaldo()*Math.pow((1+taxaRendimento/100),diaRendimento));
     }
 
 
